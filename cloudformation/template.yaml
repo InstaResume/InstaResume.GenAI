@@ -1,0 +1,18 @@
+Resources:
+  InstaResumeGenAI:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: InstaResume.GenAI
+        - Key: Namespace
+          Value: InstaResume
+        - Key: awsApplication
+          Value: >-
+            arn:aws:resource-groups:ap-southeast-1:828257946711:group/InstaResume/03bc3217bqvi66j9tw973lcz83
+      ImageId: ami-095fe715182e7b807
+      InstanceType: t4g.nano
+      KeyName: InstaResume-All
+      SubnetId: subnet-0d496ea685d4ad2ff
+      SecurityGroupIds:
+        - sg-0dc793f125d07a93f
